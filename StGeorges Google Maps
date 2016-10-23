@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- StGeorges outline container -->
+<!-- GPL v2 -->
+<head>
+<title>St Georges</title>
+<meta name="generator" content="Bluefish 2.2.8" >
+<meta name="author" content="Stuart" >
+<meta name="date" content="2016-10-23T18:27:50+0100" >
+<meta name="copyright" content="Stuart Adamson">
+<meta name="keywords" content="St Georges">
+<meta name="description" content="Outline container for St Georges community">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+      width:500px;    
+      height: 500px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+<body>
+<h1 align="center">This is a Google Map of St Georges</h1>
+ <div id="map"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(52.6915, -2.4337),
+    zoom: 15
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</body>
+</html>
+
