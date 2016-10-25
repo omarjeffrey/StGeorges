@@ -6,7 +6,7 @@
 <title>St Georges</title>
 <meta name="generator" content="Bluefish 2.2.8" >
 <meta name="author" content="Stuart" >
-<meta name="date" content="2016-10-23T18:27:50+0100" >
+<meta name="date" content="2016-10-25T15:28:13+0100" >
 <meta name="copyright" content="Stuart Adamson">
 <meta name="keywords" content="St Georges">
 <meta name="description" content="Outline container for St Georges community">
@@ -33,7 +33,8 @@
 <body>
 <h1 align="center">This is a Google Map of St Georges</h1>
  <div id="map"></div>
-
+ <!-- This button resets and redraws map to default coordinates -->
+<div id="resetButton"><input type="button" value="Reset map" id="resetMap" onclick="resetMap();"></div>
 <script>
 function myMap() {
   var mapCanvas = document.getElementById("map");
@@ -44,9 +45,11 @@ function myMap() {
   var map = new google.maps.Map(mapCanvas, mapOptions);
 }
 </script>
-
+<script>
+function resetMap() {
+  myMap();
+  }
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-
 </body>
 </html>
-
