@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <!-- StGeorges outline container -->
 <!-- GPL v2 -->
@@ -6,7 +6,7 @@
 <title>St Georges</title>
 <meta name="generator" content="Bluefish 2.2.8" >
 <meta name="author" content="Stuart" >
-<meta name="date" content="2016-10-25T15:28:13+0100" >
+<meta name="date" content="2016-11-14T17:10:39+0000" >
 <meta name="copyright" content="Stuart Adamson">
 <meta name="keywords" content="St Georges">
 <meta name="description" content="Outline container for St Georges community">
@@ -15,41 +15,21 @@
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
 <meta http-equiv="content-style-type" content="text/css">
 <meta http-equiv="expires" content="0">
-<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-      width:500px;    
-      height: 500px;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+
 </head>
 <body>
-<h1 align="center">This is a Google Map of St Georges</h1>
- <div id="map"></div>
+<iframe id="StGeorgesGoogleMap" src="StGeorges map only" width="500" height="500"></iframe>
  <!-- This button resets and redraws map to default coordinates -->
 <div id="resetButton"><input type="button" value="Reset map" id="resetMap" onclick="resetMap();"></div>
 <script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(52.6915, -2.4337),
-    zoom: 15
-  }
-  var map = new google.maps.Map(mapCanvas, mapOptions);
+function resetMap() {
+	var iframe = document.getElementById('StGeorgesGoogleMap');
+	iframe.src = iframe.src;
 }
 </script>
-<script>
-function resetMap() {
-  myMap();
-  }
-</script>
+
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
 </body>
 </html>
+
