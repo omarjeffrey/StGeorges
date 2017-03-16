@@ -1,0 +1,8 @@
+Idea is that basic host will be Wordpress (page 1)
+Within that there will be contained a HTML page (page 2) with JavaScript for interactivity (possibly Angular or similar)
+Then that will embed an iframe (page 3) into a map display, with custom markers for areas of interest
+and code handling for events and analytics, linking to rich media
+So basically the bulk of the detail about assets etc sits on page 3
+
+I'll type up some pictures and stuff to illustrate this
+idc
