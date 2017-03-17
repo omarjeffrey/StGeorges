@@ -23,7 +23,7 @@
 <div id="resetButton"><input type="button" value="Reset map" id="resetMap" onclick="resetMap();"></div>
 <script>
 function resetMap() {
-	var iframe = document.getElementById('StGeorgesGoogleMap');
+	var iframe = document.getElementById('StGeorgesMap');
 	iframe.src = iframe.src;
 }
 </script>
