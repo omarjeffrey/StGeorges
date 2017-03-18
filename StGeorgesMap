@@ -43,11 +43,12 @@ function myMap() {
     zoom: 15
   }
   var map = new google.maps.Map(mapCanvas, mapOptions);
-  //add a marker to the centre of the map
+  //add an information marker to the centre of the map
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Marker!'
+    title: 'Marker!',
+    icon: 'https://maps.google.com/mapfiles/kml/shapes/info-i.png'
   });
 }
 </script>
