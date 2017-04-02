@@ -53,7 +53,10 @@ function myMap() {
   });
   //add a click event for the marker
   marker.addListener('click', function() {
-    alert("You clicked on the marker");
+  	//give the user an alert
+    alert("You clicked on the marker\n I will now open a new tab");
+    //now open a new tab or window 
+    window.open("https:\\www.github.com");
   });
 
 }
