@@ -45,6 +45,28 @@ function myMap() {
 }
 </script>
 
+//now to add a class of markers
+//class StGeorgesMarker {
+//  constructor(latitude, longitude,tagText,informatioUrl) {
+//    this.latitude = latitude;
+//    this.longitude = longitude;
+//    this.informationUrl=informationUrl;
+//  }
+//}  
+//to populate an array of markers
+//var markers= new Array();
+//for (i = 0; i < 6; i++) {
+//    markers[i] = new StGeorgesMarker(52.6915+i,-2.4337+i,"Marker "+i,"https//www.github.com");
+//}
+//now display the markers 
+//for (i = 0; i < 6; i++) {
+//    var marker=new google.map.Marker({
+//    position={lat:markers[i].latitude, lng:markers[i].longitude);
+//    map: map;
+//    title: StGeorgesMarker[i].tagText;
+//} 
+
+
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
 </body>
