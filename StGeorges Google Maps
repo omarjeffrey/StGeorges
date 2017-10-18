@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<iframe id="StGeorgesGoogleMap" src="StGeorges map only" width="500" height="500"></iframe>
+<iframe id="StGeorgesGoogleMap" src="StGeorgesGoogleMap" width="500" height="500"></iframe>
  <!-- This button resets and redraws map to default coordinates -->
 <div id="resetButton"><input type="button" value="Reset map" id="resetMap" onclick="resetMap();"></div>
 <script>
