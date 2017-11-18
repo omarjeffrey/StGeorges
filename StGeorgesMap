@@ -6,7 +6,7 @@
 <title>St Georges map only</title>
 <meta name="generator" content="Bluefish 2.2.10" >
 <meta name="author" content="Stuart" >
-<meta name="date" content="2017-11-18T15:05:29+0000" >
+<meta name="date" content="2017-11-18T16:05:17+0000" >
 <meta name="copyright" content="Stuart Adamson">
 <meta name="keywords" content="St Georges">
 <meta name="description" content="Outline container for St Georges community">
@@ -48,12 +48,15 @@ function myMap() {
 	//first one	
 	var myMarkers = [myLatLng];
 	var myTitles = ['Centre of St Georges'];
+	var myLinks = ['127.0.0.1'];
 		
 	//now the rest
 	myMarkers.push({lat: 53.6915, lng: -2.6337});
 	myTitles.push('Not the Centre of St Georges');
+	myLinks.push('www.w3cschools.com');
 	myMarkers.push({lat: 52.6715, lng: -2.5837});
 	myTitles.push('Not the Centre of St Georges');
+	myLinks.push('www.w3cschools.com/js/');
 		
 	//Now loop through to draw them in	
 	for(i=0;i<(myMarkers.length);i++){
@@ -61,9 +64,11 @@ function myMap() {
 		position: myMarkers[i],
 		map: map,
 		title: myTitles[i],
-	
 	});
-	}
+	marker.addListener(marker, "click", function() {
+        window.location = myLinks[i];
+   });
+	};
 		
 }
 </script>
@@ -75,3 +80,5 @@ function resetMap() {
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 </html>
+
+   
