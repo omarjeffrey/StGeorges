@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- StGeorges outline container -->
+<!-- GPL v2 -->
+<head>
+<title>St Georges map only</title>
+<meta name="generator" content="Bluefish 2.2.10" >
+<meta name="author" content="Stuart" >
+<meta name="date" content="2017-11-18T16:05:17+0000" >
+<meta name="copyright" content="Stuart Adamson">
+<meta name="keywords" content="St Georges">
+<meta name="description" content="Outline container for St Georges community">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+      width:500px;    
+      height: 500px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+</style>
+</head>
+<body>
+ <div id="map"></div>
+ <!-- This button resets and redraws map to default coordinates -->
+
+<script>
+function myMap() {
+	var myLatLng = {lat: 52.6915, lng: -2.4337};
+	var mapCanvas = document.getElementById("map");
+	var mapOptions = {
+    center: myLatLng,
+    zoom: 15
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+	//now add some markers
+	//first one	
+	var myMarkers = [myLatLng];
+	var myTitles = ['Centre of St Georges'];
+	var myLinks = ['127.0.0.1'];
+	
+	var infowindow = new google.maps.InfoWindow(
+	    
+	    {content: "Hello world"}
+	    );
+	    
+
+		
+	//now the rest
+	myMarkers.push({lat: 53.6915, lng: -2.6337});
+	myTitles.push('Not the Centre of St Georges');
+	myLinks.push('http://www.bbc.co.uk');
+	myMarkers.push({lat: 52.6715, lng: -2.5837});
+	myTitles.push('Not the Centre of St Georges');
+	myLinks.push('http://www.argos.co.uk');
+		
+	//Now loop through to draw them in	
+	for(i=0;i<=(myMarkers.length);i++){
+	var marker = new google.maps.Marker({
+		position: myMarkers[i],
+		map: map,
+		title: myTitles[i],
+		url: myLinks[i],
+		
+		
+		
+	});
+	
+		google.maps.event.addListener(marker, "click", function() {
+
+ window.location.href = this.url;
+    // window.open(this.url, "_self");
+   });
+	
+
+	};
+	
+	
+}
+</script>
+<script>
+function resetMap() {
+  myMap();
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</body>
+</html>
