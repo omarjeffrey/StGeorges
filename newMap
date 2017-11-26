@@ -73,8 +73,7 @@ function myMap() {
 		title: myTitles[i],
 		url: myLinks[i],
 		
-		
-		
+			
 	});
 	
 		google.maps.event.addListener(marker, "click", function() {
